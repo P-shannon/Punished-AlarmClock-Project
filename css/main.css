@@ -1,0 +1,308 @@
+body {
+	margin:0;
+	height:100vh;/*fill the viewport*/
+	background:black;
+	color:white;
+	font-family: 'Audiowide';
+	/*make all text unselectable.*/
+	-webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+}
+
+div {
+	display:inline-block;
+}
+
+#controlContainer{
+	position:absolute;
+	display:none;
+	z-index: 50;
+	top:40%;
+	left:24%;
+	width:50%;
+	min-width:500px;
+	height:40%;
+	min-height: 300px;
+	background: rgba(100%,100%,100%,0.4);
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.buttonUp, .buttonDn{
+	width:50px;height:50px;
+}
+
+.buttonUp{
+	/*up triangle*/
+	width:0px;height:0px;
+	border-left: 25px solid transparent;
+  	border-right: 25px solid transparent;
+  	border-bottom: 50px solid orange;
+}
+
+.buttonUp:active{
+	border-bottom: 50px solid rgb(183, 127, 49);
+}
+
+.buttonDn{
+	/*down triangle*/
+	width:0px;height:0px;
+	border-left: 25px solid transparent;
+  	border-right: 25px solid transparent;
+  	border-top: 50px solid orange;
+}
+
+.buttonDn:active{
+	border-top: 50px solid rgb(183, 127, 49);
+}
+
+#digital {
+	position:absolute;
+	top:25%;
+	width:100%;
+	text-align: center;
+	font-size: 150px;
+	color:blue;
+	text-shadow: 0px 0px 150px rgb(3, 0, 255);
+}
+
+#setTime{
+	position:absolute;
+	font-size: 30px;
+	top:0px;
+	left:25px;
+}
+
+.singleLetter{
+	width:50px;height:50px;
+	position:absolute;
+	font-size: 45px;
+	text-align: center;
+}
+
+#H{
+	top:101px;
+	left:25px;
+}
+
+#M{
+	top:101px;
+	left:88px;
+}
+
+#S{
+	top:101px;
+	left:150px;
+}
+
+#hoursU{
+	position:absolute;
+	top:35px;
+	left:25px;
+}
+
+#minutesU{
+	position:absolute;
+	top:35px;
+	left:88px;
+}
+
+#secondsU{
+	position:absolute;
+	top:35px;
+	left:150px;
+}
+
+#hoursD{
+	position:absolute;
+	top:170px;
+	left:25px;
+}
+
+#minutesD{
+	position:absolute;
+	top:170px;
+	left:88px;
+}
+
+#secondsD{
+	position:absolute;
+	top:170px;
+	left:150px;
+}
+
+.alarmInput{
+	width:50px;height:30px;
+	font-size: 24px;
+}
+
+#setAlarm{
+	position:absolute;
+	font-size: 30px;
+	top:20px;
+	right:50px;
+}
+
+#aH{
+	top:60px;
+	right:190px;
+}
+
+#aHours{
+	position:absolute;
+	top:115px;
+	right:190px;
+}
+
+#aM{
+	top:60px;
+	right:120px;
+}
+
+#aMins{
+	position:absolute;
+	top:115px;
+	right:120px;
+}
+
+#aS{
+	top:60px;
+	right:51px;
+}
+
+#aSecs{
+	position:absolute;
+	top:115px;
+	right:51px;
+}
+
+#toggleFormat{
+	position:absolute;
+	bottom:0;
+	left:38%;
+	font-size: 25px;
+	background:black;
+}
+
+#alarmToggle {
+	background:black;
+	position:absolute;
+	width:25px;height:25px;
+	top:118px;
+	right:255px;
+	line-height: 27px;
+}
+#alarmPMAM {
+	position:absolute;
+	background:black;
+	display:none;
+	width:25px;height:25px;
+	top:118px;
+	right:18px;
+	line-height: 27px;
+	text-align:center;
+}
+
+#controlToggle{
+	position:absolute;
+	bottom:0px;
+	left:38%;
+	font-size: 40px;
+	color:blue;
+}
+
+/*THE DREAM IS DEAD
+
+#binaryContainer{
+	position:absolute;
+	z-index:-1;
+	top:20%;
+	left:15%;
+	border:2px solid white;
+	width:70%;
+	min-width:500px;
+	height:60%;
+	min-height:300px;
+}
+
+.binaryBlock{
+	position:absolute;
+	width:75px;height:75px;
+	border:2px solid yellow;
+}
+
+#s01{
+	top:400px;
+	right:25px;
+}
+
+#s02{
+	top:300px;
+	right:25px;
+}
+
+#s04{
+	top:200px;
+	right:25px;
+}
+
+#s08{
+	top:100px;
+	right:25px;
+}
+
+#s10{
+	top:400px;
+	right:125px;
+}
+
+#s20{
+	top:300px;
+	right:125px;
+}
+
+#s40{
+	top:200px;
+	right:125px;
+}
+
+#m01{
+	top:400px;
+	right:330px;
+}
+
+#m02{
+	top:300px;
+	right:330px;
+}
+
+#m04{
+	top:200px;
+	right:330px;
+}
+
+#m08{
+	top:100px;
+	right:330px;
+}
+
+#m10{
+	top:400px;
+	right:430px;
+}
+
+#m20{
+	top:300px;
+	right:430px;
+}
+
+#m40{
+	top:400px;
+	right:430px;
+}
+
+#h10{
+	top:400px;
+	right:430px;
+}
+
+/*binary ends*/

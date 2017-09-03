@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono|Audiowide" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title></title>
+</head>
+<body onload="runClock()">
+<div id="digital" onclick="dismiss()"></div>
+<div id="controlToggle" onclick="toggleControls()">Clock Controls</div>
+<div id="controlContainer">
+	<div class="buttonUp" onclick="clearTimeout(runningClock);hOffset=upTime(hOffset);runClock();" id="hoursU"></div>
+	<div class="buttonUp" onclick="clearTimeout(runningClock);mOffset=upTime(mOffset);runClock();" id="minutesU"></div>
+	<div class="buttonUp" onclick="clearTimeout(runningClock);sOffset=upTime(sOffset);runClock();" id="secondsU"></div>
+	<div class="buttonDn" onclick="clearTimeout(runningClock);hOffset=downTime(hOffset);runClock();" id="hoursD"></div>
+	<div class="buttonDn" onclick="clearTimeout(runningClock);mOffset=downTime(mOffset);runClock();" id="minutesD"></div>
+	<div class="buttonDn" onclick="clearTimeout(runningClock);sOffset=downTime(sOffset);runClock();" id="secondsD"></div>
+	<input class="alarmInput" maxlength="2" id="aHours" type="text">
+	<input class="alarmInput" maxlength="2" id="aMins" type="text">
+	<input class="alarmInput" maxlength="2" id="aSecs" type="text">
+	<div id="toggleFormat" onclick="toggleFormat();">12hr Format</div>
+	<div class="singleLetter" id="H">H</div>
+	<div class="singleLetter" id="M">M</div>
+	<div class="singleLetter" id="S">S</div>
+	<div id="setTime">Adjust Time</div>
+	<div id="setAlarm">Adjust Alarm</div>
+	<div id="alarmToggle" onclick="setAlarm()">Set</div>
+	<div id="alarmPMAM" onclick="toggleAlarmFormat();">AM</div>
+	<div class="singleLetter" id="aH">H</div>
+	<div class="singleLetter" id="aM">M</div>
+	<div class="singleLetter" id="aS">S</div>
+</div>
+<audio id="sound" src="sounds/alarm.mp3"></audio>
+<script type="text/javascript" src="scripts/alarm-clock.js"></script>
+
+<!--////////////THE DREAM IS DEAD!!
+<div id="binaryContainer">
+	<div class="binaryBlock" id="s01"></div>
+	<div class="binaryBlock" id="s02"></div>
+	<div class="binaryBlock" id="s04"></div>
+	<div class="binaryBlock" id="s08"></div>
+	<div class="binaryBlock" id="s10"></div>
+	<div class="binaryBlock" id="s20"></div>
+	<div class="binaryBlock" id="s40"></div>
+	
+
+	
+	<div class="binaryBlock" id="m01"></div>
+	<div class="binaryBlock" id="m02"></div>
+	<div class="binaryBlock" id="m04"></div>
+	<div class="binaryBlock" id="m08"></div>
+	<div class="binaryBlock" id="m10"></div>
+	<div class="binaryBlock" id="m20"></div>
+	<div class="binaryBlock" id="m40"></div>
+
+
+	
+	<div class="binaryBlock" id="h01"></div>
+	<div class="binaryBlock" id="h02"></div>
+	<div class="binaryBlock" id="h04"></div>
+	<div class="binaryBlock" id="h08"></div>
+	<div class="binaryBlock" id="h10"></div>
+	<div class="binaryBlock" id="h20"></div>
+	<div class="binaryBlock" id="h40"></div>
+</div>
+-->
+</body>
+</html>
